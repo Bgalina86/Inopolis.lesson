@@ -3,6 +3,7 @@ package stringClass;
 public class Homework1 {
     public static void main(String[] args) {
         String paragraph = "Недавно пришлось вносить изменения для файлика .gitlab-ci.yml во всех ветках, а потом ещё в несколько файлов и таким образом накопилось большое количество коммитов. Сейчас появилась необходимость актуализировать master ветку из условной release-abel. При мёрдже из release-abel в master мёрджатся только последние коммиты.";
+        String paragraphTo = "###";
         System.out.println(paragraph);
 
         //Возвращает длину строки
@@ -49,7 +50,7 @@ public class Homework1 {
         //Возвращает строку со значением строки, переданной в метод и приложенной к концу строки,
         // используемой для вызова этого метода. Проще говоря метод concat() в Java объединяет строки,
         // путем добавления одной строки в конец к другой.
-        System.out.println(paragraph.concat("pull"));
+        System.out.println(paragraph.concat(paragraphTo));
 
         //Встроенная функция, которая удаляет начальные и конечные пробелы.
         System.out.println(paragraph.trim());
