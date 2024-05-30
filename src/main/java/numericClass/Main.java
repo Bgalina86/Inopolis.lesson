@@ -1,4 +1,4 @@
-package com.inopolis.inopolis;
+package numericClass;
 
 public class Main {
     public static void main(String[] args) {
