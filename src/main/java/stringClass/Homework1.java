@@ -7,10 +7,10 @@ public class Homework1 {
         System.out.println(paragraph);
 
         //Возвращает длину строки
-        System.out.println(paragraph.length());
+        System.out.println("length() - возвращает длину строки = " + paragraph.length());
 
         //Проверка строки на пустату
-        System.out.println(paragraph.isEmpty());
+        System.out.println("isEmpty() - проверка строки на пустату = " + paragraph.isEmpty());
 
         //Проверка отсутствия символов. Проверка строки на NULL
         System.out.println(paragraph.isBlank());
