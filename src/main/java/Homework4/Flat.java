@@ -6,7 +6,7 @@ public class Flat {
     String Floor; // этаж
     String Repair; //тип ремонта
     boolean Elevator; // лифт
-    double Price;
+    double Price; // цена
 
     public Flat(String myNumberOfRooms, String myFloor, String myRepair, boolean myElevator, double myPrice) {
         NumberOfRooms = myNumberOfRooms;
@@ -14,13 +14,6 @@ public class Flat {
         Repair = myRepair;
         Elevator = myElevator;
         Price = myPrice;
-
-        String ElevatorTextTrue = "есть";
-        String ElevatorTextFalse = "нет";
-        String Elevator1 = Elevator;
-        if ("true" == Elevator) {
-            System.out.println(ElevatorTextTrue);
-        } else {System.out.println(ElevatorTextFalse);}
    }
 
 }
