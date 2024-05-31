@@ -1,4 +1,4 @@
-package Homework4;
+package Homework3;
 
 public class Flat {
 
@@ -14,6 +14,9 @@ public class Flat {
         Repair = myRepair;
         Elevator = myElevator;
         Price = myPrice;
-   }
+
+
+
+    }
 
 }

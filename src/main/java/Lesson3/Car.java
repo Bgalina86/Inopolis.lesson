@@ -1,4 +1,4 @@
-package Lesson4;
+package Lesson3;
 
 public class Car {
     String brand;

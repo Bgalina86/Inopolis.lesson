@@ -1,6 +1,4 @@
-package Lesson4;
-
-import java.util.concurrent.Callable;
+package Lesson3;
 
 public class Playground {
     public static void main(String[] args) {

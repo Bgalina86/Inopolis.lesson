@@ -1,4 +1,4 @@
-package Homework4;
+package Homework3;
 
 public class Room {
 
@@ -8,7 +8,7 @@ public class Room {
     //boolean DoubleGlazedWindow; // стеклопакеты / не стеклопакеты
 
 
-    public Room(double myCeilingHeight, double myLengthRoom, double myWidthRoom,boolean myDoubleGlazedWindow){
+    public Room(double myCeilingHeight, double myLengthRoom, double myWidthRoom){
         CeilingHeight = myCeilingHeight;
         LengthRoom = myLengthRoom;
         WidthRoom = myWidthRoom;
