@@ -1,7 +1,6 @@
 package Homework3;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
+
 
 public class Task3Item {
 
@@ -25,7 +24,7 @@ public class Task3Item {
         System.out.println("* Артикул: " + item5.IdProduct + " Наименование: " + item5.NameProduct + " Цена: " + item5.Price
             + "руб. " + item5.QuantityProduct + "шт. Вид: " + item5.CharacteristicProduct + " Срок годности: " + item5.DateProduct);
 
-//SimpleDateFormat("2025-01-20'T'20:17:46.384'Z'")
+
     }
 
 }
