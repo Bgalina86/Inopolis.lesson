@@ -21,11 +21,7 @@ public class Task2ArrayNumber {
         System.out.printf("\n E: " + "%.5f", ArrayOfDoubleNumder[1]);
         System.out.printf("\n 1: " + "%.5f", ArrayOfDoubleNumder[2]);
         System.out.println("\n////");
-        String ArrayString;
 
-        ArrayString = String.valueOf(
-            "Pi = " + ArrayOfDoubleNumder[0] +" E = "+ ArrayOfDoubleNumder[1] + " 1 = " + ArrayOfDoubleNumder[2]);
-System.out.printf(ArrayString);
     }
 
 
