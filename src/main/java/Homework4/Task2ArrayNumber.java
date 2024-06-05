@@ -20,7 +20,7 @@ public class Task2ArrayNumber {
         System.out.printf("Пи: " + "%.5f", ArrayOfDoubleNumder[0]);
         System.out.printf("\n E: " + "%.5f", ArrayOfDoubleNumder[1]);
         System.out.printf("\n 1: " + "%.5f", ArrayOfDoubleNumder[2]);
-        System.out.println("\n////");
+
 
     }
 

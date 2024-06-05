@@ -8,6 +8,7 @@ public class Movie {
     String genre;
     String country;
     boolean oskar;
+    int year;
 
     public Movie(String name, double rating, String genre, String country, boolean oskar) {
         this.name = name;

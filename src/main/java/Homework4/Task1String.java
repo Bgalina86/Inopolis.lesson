@@ -6,9 +6,10 @@ package Homework4;
  3. Массив должен называться todoList
  4. Положите в массив 5 дел на день
  */
-public class Task1 {
+public class Task1String {
 
     public static void main(String[] args) {
+
         // Организация массива из 5 элементов
         String[] ArrayOfStrings = new String[5];
 
