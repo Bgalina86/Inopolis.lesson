@@ -9,19 +9,24 @@ public class Task2ArrayNumber {
 
     public static void main(String[] args) {
         // Организация массива из 5 элементов
-        double[] ArrayOfDoubleNumder = new double[3];
+        String[] ArrayOfDoubleNumder = new String[3];
 
         //Заполнение массива данными
-        ArrayOfDoubleNumder[0] = Math.PI;
-        ArrayOfDoubleNumder[1] = Math.E;
-        ArrayOfDoubleNumder[2] = 1.000000000;
+        String valuePi = String.format("%.5f", Math.PI);
+        ArrayOfDoubleNumder[0] = valuePi;
+        String valueE = String.format("%.5f", Math.E);
+        ArrayOfDoubleNumder[1] = valueE;
+        String value1 = String.format("%.5f", 1.00000000000000);
+        ArrayOfDoubleNumder[2] = value1;
 
-        //Вывод на экран элементов из массива с точностью до 5 знака после запятой
-        System.out.printf("Пи: " + "%.5f", ArrayOfDoubleNumder[0]);
-        System.out.printf("\n E: " + "%.5f", ArrayOfDoubleNumder[1]);
-        System.out.printf("\n 1: " + "%.5f", ArrayOfDoubleNumder[2]);
-
-
+//        //Вывод на экран элементов из массива с точностью до 5 знака после запятой
+//        System.out.printf("Пи: " + "%.5f", ArrayOfDoubleNumder[0]);
+//        System.out.printf("\n E: " + "%.5f", ArrayOfDoubleNumder[1]);
+//        System.out.printf("\n 1: " + "%.5f", ArrayOfDoubleNumder[2]);
+//
+        System.out.println(ArrayOfDoubleNumder[0]);
+        System.out.println(ArrayOfDoubleNumder[1]);
+        System.out.println(ArrayOfDoubleNumder[2]);
     }
 
 
