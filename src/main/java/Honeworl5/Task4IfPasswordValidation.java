@@ -3,42 +3,68 @@ package Honeworl5;
 import java.lang.constant.Constable;
 
 
-public class Task4IfPasswordValidation
-{
+public class Task4IfPasswordValidation {
 
-    /** Пример статического метода.
+    /**
+     * Пример статического метода.
      * Статический метод проверяет пароль, перебирая символы
      *
      * @param password - пароль для проверки
      * @return true если встречен символ '@', false в противном случае
      */
-    private static boolean checkPassword(final String password)
-    {
-        for(int i = 0; i< password.length(); i++)
-        {
-            if(password.charAt(i) == '@')
-                return true;
-            if(password.charAt(i) == '!')
-                return true;
-            if(password.charAt(i) == '#')
-                return true;
+    private static boolean checkPassword(final String password) {
+        String[] Password = password.split("");
+        for (int i = 0; i < Password.length; i++) {
 
+            String PasswordValidationNumber = "0123456789";
+            //Для разделения строки на отдельные символы:
+            String[] ArrayPasswordValidationNumber = PasswordValidationNumber.split("");
+
+            for (int idNuumber = 0; idNuumber < PasswordValidationNumber.length(); idNuumber++) {
+                if (Password[i]==ArrayPasswordValidationNumber[idNuumber]) {
+                    String PasswordValidationSimbal = "!@#$%^&*";
+                    //Для разделения строки на отдельные символы:
+                    String[] ArrayPasswordValidationSimbal = PasswordValidationSimbal.split("");
+
+                    for (int idSimbal = 0; idSimbal < PasswordValidationSimbal.length(); idSimbal++) {
+                        if (Password[i] == ArrayPasswordValidationSimbal[idSimbal]) {
+                            return true;
+                        } else {
+                            System.out.println("Пароль должен содержать минимум 1 спецсимвол.");
+                        }
+                    }
+                } else {
+                    System.out.println("Пароль должен содержать минимум 1 цифру.");
+                }
+            }
         }
-
+        if (password.length() > 8){
+        return true;}
         return false;
     }
 
 
-    public static void main(String[] args)
-    {
+//            if (password.charAt(i) == '@')
+//                return true;
+//            if (password.charAt(i) == '!')
+//                return true;
+//            if (password.charAt(i) == '#')
+//                return true;
 
-        String Password = "asdf2!FF";
 
-        if(checkPassword(Password))
+//        return false;
+
+
+    public static void main(String[] args) {
+
+        String Password = "a3df2!FF";
+
+        if (checkPassword(Password))
             System.out.println("Yes");
         else
             System.out.println("nO");
-
+    }
+}
 //
 //        String Password = "asdf2!FF";
 //        //Для разделения строки на отдельные символы:
@@ -67,7 +93,6 @@ public class Task4IfPasswordValidation
 //        for (int i = 0; i < str.length(); i++) {
 //            arr[i] = String.valueOf(str.charAt(i));
 //        }
-
 
 
 //        for (int i = 0; i < PasswordValidation.length; i++){
@@ -104,10 +129,8 @@ public class Task4IfPasswordValidation
 //                        System.out.println(Password);
 //                        System.out.println("пароль принят");
 
-                }
 
 
-    }
 
 //        switch (Password){
 //
