@@ -13,30 +13,26 @@ public class Task4IfPasswordValidation {
      * @return true если встречен символ '@', false в противном случае
      */
     private static boolean checkPassword(final String password) {
-        String[] Password = password.split("");
+        String[] Password = password.split(" ,");
         for (int i = 0; i < Password.length; i++) {
 
-            String PasswordValidationNumber = "0123456789";
-            //Для разделения строки на отдельные символы:
-            String[] ArrayPasswordValidationNumber = PasswordValidationNumber.split("");
+            String[] ArrayPasswordValidationNumber = {"0","1","2","3","4","5","6","7","8","9"};
 
-            for (int idNuumber = 0; idNuumber < PasswordValidationNumber.length(); idNuumber++) {
-                if (Password[i]==ArrayPasswordValidationNumber[idNuumber]) {
-                    String PasswordValidationSimbal = "!@#$%^&*";
-                    //Для разделения строки на отдельные символы:
-                    String[] ArrayPasswordValidationSimbal = PasswordValidationSimbal.split("");
+            for (int idNuumber = 0; ArrayPasswordValidationNumber.length > idNuumber; idNuumber++)
+                if (Password[i] == ArrayPasswordValidationNumber[idNuumber]) {
+                   System.out.println("Есть");
+                } else {System.out.println("Пароль должен содержать минимум 1 цифру.");
+                   // String[] ArrayPasswordValidationSimbal = {"!", "@", "#", "$", "%", "^", "&", "*" };
 
-                    for (int idSimbal = 0; idSimbal < PasswordValidationSimbal.length(); idSimbal++) {
-                        if (Password[i] == ArrayPasswordValidationSimbal[idSimbal]) {
-                            return true;
-                        } else {
-                            System.out.println("Пароль должен содержать минимум 1 спецсимвол.");
-                        }
-                    }
-                } else {
-                    System.out.println("Пароль должен содержать минимум 1 цифру.");
+//                    for (int idSimbal = 0; idSimbal < ArrayPasswordValidationSimbal.length(); idSimbal++) {
+//                        if (Password[i] == ArrayPasswordValidationSimbal[idSimbal]) {
+//                            return true;
+//                        } else {
+//                            System.out.println("Пароль должен содержать минимум 1 спецсимвол.");
+//                        }
+//                    }
+
                 }
-            }
         }
         if (password.length() > 8){
         return true;}
