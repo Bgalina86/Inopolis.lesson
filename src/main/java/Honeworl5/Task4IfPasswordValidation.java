@@ -5,134 +5,82 @@ import java.lang.constant.Constable;
 
 public class Task4IfPasswordValidation {
 
-    /**
-     * Пример статического метода.
-     * Статический метод проверяет пароль, перебирая символы
-     *
-     * @param password - пароль для проверки
-     * @return true если встречен символ '@', false в противном случае
-     */
-    private static boolean checkPassword(final String password) {
-        String[] Password = password.split(" ,");
-        for (int i = 0; i < Password.length; i++) {
+    static final int Error_PasswordIsTooShort  = 1;
+    static final int Error_NoDigitDetected = 2;
+    static final int Error_NoSpecialCharDetected  = 3;
 
-            String[] ArrayPasswordValidationNumber = {"0","1","2","3","4","5","6","7","8","9"};
+    static final String kSpecialChars = "!@#$%^&*\"№";
 
-            for (int idNuumber = 0; ArrayPasswordValidationNumber.length > idNuumber; idNuumber++)
-                if (Password[i] == ArrayPasswordValidationNumber[idNuumber]) {
-                   System.out.println("Есть");
-                } else {System.out.println("Пароль должен содержать минимум 1 цифру.");
-                   // String[] ArrayPasswordValidationSimbal = {"!", "@", "#", "$", "%", "^", "&", "*" };
-
-//                    for (int idSimbal = 0; idSimbal < ArrayPasswordValidationSimbal.length(); idSimbal++) {
-//                        if (Password[i] == ArrayPasswordValidationSimbal[idSimbal]) {
-//                            return true;
-//                        } else {
-//                            System.out.println("Пароль должен содержать минимум 1 спецсимвол.");
-//                        }
-//                    }
-
-                }
+    private static String displayErrorText(int code)
+    {
+        switch (code)
+        {
+            case 0: return "Пароль нормальный";
+            case Error_PasswordIsTooShort : return "Пароль менее 8 символов";
+            case Error_NoDigitDetected : return "Пароль должен содержать минимум 1 цифру";
+            case Error_NoSpecialCharDetected: return "Пароль должен содержать минимум 1 спецсимвол";
+            default:
+                return "Неизвестный код ошибки";
         }
-        if (password.length() > 8){
-        return true;}
+    }
+
+    /** Определяет, является ли символ специальным.
+     *
+     * @param sym Символ для проверки
+     * @return true или false.
+     */
+    private static boolean isSpecialSymbol(char sym)
+    {
+        for(int i = 0; i < kSpecialChars.length(); i++)
+        {
+            if(kSpecialChars.charAt(i) == sym)
+                return true;
+        }
+
         return false;
     }
 
+    /** Проверяет пароль на валидность по правилам
+     *
+     * @param password Пароль
+     * @return Код ошибки, если пароль невалидный, или 0 - если правильный.
+     */
+    private static int checkPassword2(final String password) {
+        if (password.length() < 8)
+            return Error_PasswordIsTooShort;
 
-//            if (password.charAt(i) == '@')
-//                return true;
-//            if (password.charAt(i) == '!')
-//                return true;
-//            if (password.charAt(i) == '#')
-//                return true;
+        int amountOfDigits = 0;
+        int amountOfSpecChars = 0;
 
+        for (int i = 0; i < password.length(); i++) {
+            char currChar = password.charAt(i);
+            if (Character.isDigit(currChar)) {
+                amountOfDigits++;
+            }
 
-//        return false;
+            if (isSpecialSymbol(currChar)) {
+                amountOfSpecChars++;
+            }
+        }
 
+        if(amountOfDigits == 0)
+            return Error_NoDigitDetected;
+
+        if(amountOfSpecChars == 0)
+            return Error_NoSpecialCharDetected;
+
+        return 0;
+    }
 
     public static void main(String[] args) {
-
-        String Password = "a3df2!FF";
-
-        if (checkPassword(Password))
-            System.out.println("Yes");
-        else
-            System.out.println("nO");
+    //
+    // Tесты
+    //
+       System.out.println( displayErrorText(checkPassword2("AAAA"))); // короткий слишком
+       System.out.println( displayErrorText(checkPassword2("ABCDEFGH"))); // нет цифр
+       System.out.println( displayErrorText(checkPassword2("ABCDEFGH123"))); // нет спец. символов
+       System.out.println( displayErrorText(checkPassword2("ABCDEFGH123@"))); // норма
     }
+
+
 }
-//
-//        String Password = "asdf2!FF";
-//        //Для разделения строки на отдельные символы:
-//        String[] ArrayPasswordValidation = Password.split("");
-//
-//                for (int i = 0; i < Password.length(); i++){
-// Поместили каждый элемент по очереди в str
-//                    String str = ArrayPasswordValidation[i];
-//
-//                    // Нужно проверить данный элемент на предмет наличия цифр от 0 до 9. Если цифр нет - сообщить об ошибки. Если есть проверка на спецсимволы
-//                    if ((!str.contains("2"))) {
-//                System.out.println(!Password.contains("2"));
-//                System.out.println("Пароль должен содержать минимум 1 цифру.");
-//
-//            }
-//           }
-
-        //System.out.println(ArrayPasswordValidation[4]);
-
-//   Вручную
-//Можно использовать цикл for для ручного заполнения массива:
-//
-//        String str = "пример";
-//        String[] arr = new String[str.length()];
-//
-//        for (int i = 0; i < str.length(); i++) {
-//            arr[i] = String.valueOf(str.charAt(i));
-//        }
-
-
-//        for (int i = 0; i < PasswordValidation.length; i++){
-//            char Validation = PasswordValidation[i];
-//            char validation = Validation;
-//            switch Validation {
-//               case 0:
-//               default:
-//                   throw new IllegalStateException(
-//                       "Unexpected value: " + PasswordValidation[i]);
-//           }
-
-//
-//            if ((Password.contains("2"))) {
-//                System.out.println(!Password.contains("2"));
-//                System.out.println("Пароль должен содержать минимум 1 цифру.");
-//
-//            }
-//
-//        }
-//            if (Password.length()
-//                != 8) {
-//                System.out.println(Password.length());
-//                System.out.println("Пароль не менее 8 символов.");
-//            } else if ((!Password.contains("2"))) {
-//                System.out.println(!Password.contains("2"));
-//                    System.out.println("Пароль должен содержать минимум 1 цифру.");
-//
-//                } else
-//                    if (!Password.contains("!") || !Password.contains("@") ) {
-//                        System.out.println(Password);
-//                        System.out.println("Пароль должен содержать минимум 1 спецсимвол");
-//                    } else {
-//                        System.out.println(Password);
-//                        System.out.println("пароль принят");
-
-
-
-
-//        switch (Password){
-//
-//            case !Password.contains("2"):
-//                System.out.println("Пароль должен содержать минимум 1 цифру.");
-//                break;
-//            default:
-//                throw new IllegalStateException("Unexpected value: " + Password);
-//        }
