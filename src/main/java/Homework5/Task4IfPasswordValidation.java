@@ -1,4 +1,4 @@
-package Honeworl5;
+package Homework5;
 /**
  * ●	Переменная String с именем password
  * ●	Опишите алгоритм проверки пароля. Требования к паролю:
@@ -8,17 +8,18 @@ package Honeworl5;
  * ●	если пароль подходит по всем критериям, написать "пароль принят"
  */
 
-import java.lang.constant.Constable;
-
 
 public class Task4IfPasswordValidation {
 
+    // Организация кода ошибки
     static final int Error_PasswordIsTooShort  = 1;
     static final int Error_NoDigitDetected = 2;
     static final int Error_NoSpecialCharDetected  = 3;
 
+    //Определение строки спецсимволов
     static final String kSpecialChars = "!@#$%^&*\"№";
 
+    //Вывод сообщения на основании кода
     private static String displayErrorText(int code)
     {
         switch (code)
@@ -54,12 +55,18 @@ public class Task4IfPasswordValidation {
      * @return Код ошибки, если пароль невалидный, или 0 - если правильный.
      */
     private static int checkPassword2(final String password) {
+        //
+        // Правило: В пароле необходимое число символов
+        //
         if (password.length() < 8)
             return Error_PasswordIsTooShort;
 
-        int amountOfDigits = 0;
-        int amountOfSpecChars = 0;
+        int amountOfDigits = 0;           // Число встреченных цифр
+        int amountOfSpecChars = 0;        // Число встреченных спецсимволов
 
+        //
+        // В цикле проходим по строке, считаем цифры и спецсимволы
+        //
         for (int i = 0; i < password.length(); i++) {
             char currChar = password.charAt(i);
             if (Character.isDigit(currChar)) {
@@ -71,9 +78,15 @@ public class Task4IfPasswordValidation {
             }
         }
 
+        //
+        // Правило: должна быть хотя бы одна цифра
+        //
         if(amountOfDigits == 0)
             return Error_NoDigitDetected;
 
+        //
+        // Правило: должен быть хотя бы один спец-символ
+        //
         if(amountOfSpecChars == 0)
             return Error_NoSpecialCharDetected;
 

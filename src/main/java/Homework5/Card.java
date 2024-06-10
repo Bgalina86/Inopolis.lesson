@@ -1,7 +1,4 @@
-package Honeworl5;
-
-import java.io.InputStream;
-import java.util.Scanner;
+package Homework5;
 
 public class Card {
     private String numberCard;
@@ -16,23 +13,24 @@ public class Card {
         this.pinCode = pinCode;
     }
 
-     public void getCard(){
+    public void getCard() {
 
         // Убираем пробелы из записи и записываем в переменную cartNumberWithoutSpaces
         String cartNumberWithoutSpaces = numberCard.replace(" ", "");
 
         //Вывод на экран
-        System.out.println( " **** **** **** " + numberCard.substring(numberCard.length()-4)); // шаблон "1234 5678 9012 3456";
+        System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4)); // шаблон "1234 5678 9012 3456";
         //System.out.println( " **** **** **** " + cartNumberWithoutSpaces.substring(cartNumberWithoutSpaces.length()-4)); // удалили пробелы
     }
 
-    public void getPinCodeAndNumberCard(String newPinCode){
+    public void getPinCodeAndNumberCard(String newPinCode) {
         /**
          * ●	Опишите в классе метод, который принимает на вход пин-код. Если переданный пин-код совпал с пин-кодом карты, напечатать в консоль номер карты без маски (все цифры)
          */
-       String userPinCode = "";
+        String userPinCode = "";
 
-        if (userPinCode.equals(pinCode)){ System.out.println(this.numberCard);
-                    }
+        if (userPinCode.equals(pinCode)) {
+            System.out.println(this.numberCard);
+        }
     }
 }

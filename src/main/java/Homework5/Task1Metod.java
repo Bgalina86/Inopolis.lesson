@@ -1,6 +1,4 @@
-package Honeworl5;
-
-import java.util.Scanner;
+package Homework5;
 
 /**
  * Маскировка карты 2.0 ●	Создайте класс Card ●	У класса должны быть поля: ○	номер ○	срок годности
@@ -14,15 +12,14 @@ import java.util.Scanner;
 public class Task1Metod {
 
     public static void main(String[] args) {
+
+        // Создание новой карты
         Card pinCode = new Card("1244 4513 7856 8563", "02.05.2024", "455", "4578");
-/**
- * ●	Создайте класс MyProgram + метод psvm
- * ○	В методе создайте новую карту
- * ○	Вызовите сначала метод печати с маской
- * ○	Потом метод печати с пин-кодом
- * ○	Убедитесь, что нельзя получить никакие данные карты напрямую через поля (используйте private)
- */
+
+        //Вывод с маской
         pinCode.getCard();
+
+        //Вывод с пин-кодом
         pinCode.getPinCodeAndNumberCard("4578");
 
 

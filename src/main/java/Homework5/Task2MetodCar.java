@@ -1,4 +1,4 @@
-package Honeworl5;
+package Homework5;
 
 /**
  * https://github.com/EreminD/course_23.05.git

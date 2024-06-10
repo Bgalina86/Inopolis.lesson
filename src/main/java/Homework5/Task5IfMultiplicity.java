@@ -1,6 +1,4 @@
-package Honeworl5;
-
-import java.util.Random;
+package Homework5;
 
 /**
  * Это – классическое задание с собеседования. ●	выведите на экран числа 1 до 100. При этом: ○	если
@@ -12,7 +10,7 @@ import java.util.Random;
 public class Task5IfMultiplicity {
 
     public static void main(String[] args) {
-        //int EvenOrOdd = new Random().nextInt(30);
+
         for (int i = 1; i <=100; i++) {
             if (i % 3 == 0) {
                 System.out.println("Fizz");

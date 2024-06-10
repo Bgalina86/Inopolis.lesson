@@ -1,4 +1,4 @@
-package Honeworl5;
+package Homework5;
 //●	Создайте переменную типа int и присвойте ей любое значение
 //    ●	Если число четное (делится на 2 без остатка), напишите "Четное число."
 //    ●	Если число нечетное, напишите "Нечетное число."
@@ -21,7 +21,11 @@ import java.util.Random;
 public class Task2IfEvenOrOdd {
 
     public static void main(String[] args) {
+
+        //Организация случайного числа
         int EvenOrOdd = new Random().nextInt(30);
+
+        //Проверка на четность и нечетность
         if (EvenOrOdd % 2 == 0) {
             System.out.println(EvenOrOdd);
             System.out.println("Четное число");

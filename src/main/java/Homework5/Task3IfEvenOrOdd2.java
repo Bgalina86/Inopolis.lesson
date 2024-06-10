@@ -1,4 +1,4 @@
-package Honeworl5;
+package Homework5;
 
 import java.util.Random;
 
@@ -10,19 +10,25 @@ public class Task3IfEvenOrOdd2 {
 
     public static void main(String[] args) {
 
+        // Организация случайного числа
         int EvenOrOdd = new Random().nextInt(30);
+
+        //Проверка на четность и кратность 4
         if ((EvenOrOdd % 2 == 0) && (EvenOrOdd % 4 == 0)) {
             System.out.println(EvenOrOdd);
             System.out.println("Четное число. Кратно четырем");
         } else {
+            //Вывод всех четных не относящихся к кратности 4
             if ((EvenOrOdd % 2 == 0)) {
                 System.out.println(EvenOrOdd);
                 System.out.println("Четное число.");
             } else {
+                //Нечетные и кратные 3
                 if ((EvenOrOdd % 2 == 1) && (EvenOrOdd % 3 == 0)) {
                     System.out.println(EvenOrOdd);
                     System.out.println("Нечетное число. Кратно трем");
                 } else {
+                    //Все остальные числа
                     System.out.println(EvenOrOdd);
                     System.out.println("Нечетное число");
                 }

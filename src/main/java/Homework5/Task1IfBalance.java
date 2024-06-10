@@ -1,4 +1,4 @@
-package Honeworl5;
+package Homework5;
 
 //●	Создайте переменную balance типа int.
 //    ●	Положите в нее значение
@@ -7,8 +7,10 @@ package Honeworl5;
 public class Task1IfBalance {
 
     public static void main(String[] args) {
+
         int balance;
-        balance = 5;
+        balance = 10;
+
         if (balance == 10) {
             System.out.println("Десятка");
         }

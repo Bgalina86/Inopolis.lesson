@@ -1,4 +1,4 @@
-package Honeworl5;
+package Homework5;
 
 public class Car {
 
@@ -16,14 +16,17 @@ public class Car {
         this.currentSpeed = currentSpeed;
     }
 
+    //Передача текущей скорости
     public int getCurrentSpeed() {
         return this.currentSpeed;
     }
 
+    //Разгон
     public void speedUp(int currentSpeedIncrease) {
         this.currentSpeed = this.currentSpeed + currentSpeedIncrease;
     }
 
+    // Проверка нижней границы скорости
     public void breakCurrentSpeed() {
         if (this.currentSpeed <= 10) {
             this.currentSpeed = 0;
