@@ -22,29 +22,48 @@ package Honeworl5;
  * ●	Запросите текущую скорость и выведите ее на экран. Должно быть 0
  * Пример кода работы с классом Car:
  * Car car = new Car("Volvo", "S60");
- *
+ * <p>
  * String speed = car.getCurrentSpeed();
  * System.out.println(speed); // тут 0
- *
+ * <p>
  * car.speedUp(25);
  * speed = car.getCurrentSpeed();
  * System.out.println(speed); // тут 25
- *
+ * <p>
  * car.brake()
  * speed = car.getCurrentSpeed();
  * System.out.println(speed); // тут 15
- *
+ * <p>
  * car.brake()
  * speed = car.getCurrentSpeed();
  * System.out.println(speed); // тут 5
- *
+ * <p>
  * car.brake()
  * speed = car.getCurrentSpeed();
  * System.out.println(speed); // тут 0
- * */
+ */
 
 public class Task2MetodCar {
     public static void main(String[] args) {
+        Car car = new Car("Volvo", "S60");
 
+        int speed = car.getCurrentSpeed();
+        System.out.println(speed); // тут 0
+
+        car.speedUp(25);
+        speed = car.getCurrentSpeed();
+        System.out.println(speed); // тут 25
+
+        car.breakCurrentSpeed();
+        speed = car.getCurrentSpeed();
+        System.out.println(speed); // тут 15
+
+        car.breakCurrentSpeed();
+        speed = car.getCurrentSpeed();
+        System.out.println(speed); // тут 5
+
+        car.breakCurrentSpeed();
+        speed = car.getCurrentSpeed();
+        System.out.println(speed); // тут 0
     }
 }
