@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Card {
     private String numberCard;
-    String bestBeforeDate;
-    String cvv;
-    String pinCode;
+    private String bestBeforeDate;
+    private String cvv;
+    private String pinCode;
 
     public Card(String numberCard, String bestBeforeDate, String cvv, String pinCode) {
         this.numberCard = numberCard;
