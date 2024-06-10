@@ -22,7 +22,7 @@ import java.util.Scanner;
 public class Task1Metod {
 
     public static void main(String[] args) {
-
+        Card pinCode = new Card("1244 4513 7856 8563", "02.05.2024", "455", "4578");
 /**
  * ●	Создайте класс MyProgram + метод psvm
  * ○	В методе создайте новую карту
@@ -30,6 +30,9 @@ public class Task1Metod {
  * ○	Потом метод печати с пин-кодом
  * ○	Убедитесь, что нельзя получить никакие данные карты напрямую через поля (используйте private)
  */
+        pinCode.getCard();
+        //System.out.println();
+        pinCode.getPinCodeAndNumberCard("4578");
 
     }
 
