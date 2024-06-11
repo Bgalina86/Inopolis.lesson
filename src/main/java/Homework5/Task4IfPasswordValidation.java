@@ -101,9 +101,9 @@ public class Task4IfPasswordValidation {
        System.out.println( displayErrorText(checkPassword2("ABCDEFGH"))); // нет цифр
        System.out.println( displayErrorText(checkPassword2("ABCDEFGH123"))); // нет спец. символов
        System.out.println( displayErrorText(checkPassword2("ABCDEFGH123@"))); // норма
-         System.out.println( displayErrorText(checkPassword2("ABH123@"))); //
-        System.out.println( displayErrorText(checkPassword2("AGH123"))); //
-        System.out.println( displayErrorText(checkPassword2("ABC@"))); //
+         System.out.println( displayErrorText(checkPassword2("ABH123@"))); //короткий слишком
+        System.out.println( displayErrorText(checkPassword2("AGH123"))); //короткий слишком
+        System.out.println( displayErrorText(checkPassword2("ABC@"))); //короткий слишком
     }
 
 

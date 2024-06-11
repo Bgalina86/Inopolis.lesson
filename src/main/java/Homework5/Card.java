@@ -22,8 +22,8 @@ public class Card {
         System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4)); // шаблон "1234 5678 9012 3456";
         //System.out.println( " **** **** **** " + cartNumberWithoutSpaces.substring(cartNumberWithoutSpaces.length()-4)); // удалили пробелы
     }
-
-    public void getPinCodeAndNumberCard(String newPinCode) {
+//
+    public void getCard(String newPinCode) {
         /**
          * ●	Опишите в классе метод, который принимает на вход пин-код. Если переданный пин-код совпал с пин-кодом карты, напечатать в консоль номер карты без маски (все цифры)
          */
@@ -31,6 +31,6 @@ public class Card {
 
         if (userPinCode.equals(pinCode)) {
             System.out.println(this.numberCard);
-        }
+        }else {getCard();}
     }
 }
