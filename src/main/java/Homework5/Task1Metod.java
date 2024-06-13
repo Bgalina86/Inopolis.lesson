@@ -20,7 +20,7 @@ public class Task1Metod {
         pinCode.getCard();
 
         //Вывод с пин-кодом
-        pinCode.getPinCodeAndNumberCard("4578");
+        pinCode.getCard("4578");
 
 
     }

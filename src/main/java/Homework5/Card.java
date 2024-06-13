@@ -33,4 +33,7 @@ public class Card {
             System.out.println(this.numberCard);
         }else {getCard();}
     }
+
+//    public void getPinCodeAndNumberCard(String s) {
+//    }
 }
