@@ -13,6 +13,22 @@ public class Card {
         this.pinCode = pinCode;
     }
 
+    public String getNumberCard() {
+        return numberCard;
+    }
+
+    public void setNumberCard(String numberCard) {
+        this.numberCard = numberCard;
+    }
+
+    public String getPinCode() {
+        return pinCode;
+    }
+
+    public void setPinCode(String pinCode) {
+        this.pinCode = pinCode;
+    }
+
     public void getCard() {
 
         // Убираем пробелы из записи и записываем в переменную cartNumberWithoutSpaces
@@ -33,7 +49,4 @@ public class Card {
             System.out.println(this.numberCard);
         }else {getCard();}
     }
-
-//    public void getPinCodeAndNumberCard(String s) {
-//    }
 }

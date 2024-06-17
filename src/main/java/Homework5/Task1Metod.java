@@ -14,13 +14,13 @@ public class Task1Metod {
     public static void main(String[] args) {
 
         // Создание новой карты
-        Card pinCode = new Card("1244 4513 7856 8563", "02.05.2024", "455", "4578");
+        Card newCard = new Card("1244 4513 7856 8563", "02.05.2024", "455", "4578");
 
         //Вывод с маской
-        pinCode.getCard();
+        newCard.getCard();
 
         //Вывод с пин-кодом
-        pinCode.getCard("4578");
+        newCard.getCard("4578");
 
 
     }
