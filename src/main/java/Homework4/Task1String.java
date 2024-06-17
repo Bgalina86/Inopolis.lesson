@@ -11,14 +11,14 @@ public class Task1String {
     public static void main(String[] args) {
 
         // Организация массива из 5 элементов
-        String[] ArrayOfStrings = new String[5];
+        String[] todoList = new String[5];
 
         //Заполнение массива данными
-        ArrayOfStrings[0] = "Дуб";
-        ArrayOfStrings[1] = "Осина";
-        ArrayOfStrings[2] = "Ольха";
-        ArrayOfStrings[3] = "Черёмуха";
-        ArrayOfStrings[4] = "Берёза";
+        todoList[0] = "Заправить кровать ";
+        todoList[1] = "Сделать зарядку";
+        todoList[2] = "Умыться";
+        todoList[3] = "Приготовить завтрак";
+        todoList[4] = "Позавтракать";
     }
 
 }
