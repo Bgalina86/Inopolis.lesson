@@ -26,6 +26,22 @@ public class Card {
         return numberCard;
     }
 
+    public String getNumberCard() {
+        return numberCard;
+    }
+
+    public void setNumberCard(String numberCard) {
+        this.numberCard = numberCard;
+    }
+
+    public String getPinCode() {
+        return pinCode;
+    }
+
+    public void setPinCode(String pinCode) {
+        this.pinCode = pinCode;
+    }
+
     public void getCard() {
 
         // Убираем пробелы из записи и записываем в переменную cartNumberWithoutSpaces
@@ -44,7 +60,4 @@ public class Card {
             System.out.println(this.numberCard);
         }else { System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4));}//getCard();
     }
-
-//    public void getPinCodeAndNumberCard(String s) {
-//    }
 }
