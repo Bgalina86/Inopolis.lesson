@@ -6,11 +6,11 @@ public class Card {
     private String cvv;
     private String pinCode;
 
-    public Card(String numberCard, String bestBeforeDate, String cvv) {
+    public Card(String numberCard, String bestBeforeDate, String cvv, String pinCode) {
         this.numberCard = numberCard;
         this.bestBeforeDate = bestBeforeDate;
         this.cvv = cvv;
-
+        this.pinCode = pinCode;
     }
 
     public String getPinCode() {

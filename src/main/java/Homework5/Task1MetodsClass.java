@@ -22,8 +22,8 @@ public class Task1MetodsClass {
     public static <Card1> void main(String[] args) {
 
         // Создание новой карты
-        Card cardNew = new Card("1244 4513 7856 8563", "02.05.2024", "455");
-        cardNew.setPinCode("4578");
+        Card cardNew = new Card("1244 4513 7856 8563", "02.05.2024", "455","4578");
+
        String userPinCode = cardNew.setPinCode("4578");
 
         //Вывод с маской
