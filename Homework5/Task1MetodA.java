@@ -1,4 +1,6 @@
-package Homework5;
+package Consult.Homework5;
+
+import Consult.Homework5.Card1;
 
 /**
  * Маскировка карты 2.0
@@ -19,22 +21,22 @@ package Homework5;
  * ○	Потом метод печати с пин-кодом
  * ○	Убедитесь, что нельзя получить никакие данные карты напрямую через поля (используйте private)
  */
-public class Task1Metod {
+public class Task1MetodA {
 
     public static void main(String[] args) {
 
-        // Создание новой карты
-        Card cardNew = new Card("1244 4513 7856 8563", "02.05.2024", "455");
-        cardNew.setPinCode("4578");
-        String userPinCode = cardNew.setPinCode("4578");
-
-        //Вывод с маской
-        cardNew.getCard();
-
-        //Вывод с пин-кодом
-        cardNew.getCard("4578");
-
-
-    }
+//        // Создание новой карты
+//        Card1 cardNew = new Card1("1244 4513 7856 8563", "02.05.2024", "455");
+//        cardNew.setPinCode("4578");
+//        String userPinCode1 = cardNew.setPinCode("4578");
+//
+//        //Вывод с маской
+//        cardNew.getCard();
+//
+//        //Вывод с пин-кодом
+//        cardNew.getCard("4578");
+//
+//
+   }
 
 }

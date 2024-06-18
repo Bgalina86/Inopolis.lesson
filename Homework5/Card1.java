@@ -1,35 +1,47 @@
-package Homework5;
+package Consult.Homework5;
 
-public class Card {
+public class Card1 {
     private String numberCard;
     private String bestBeforeDate;
     private String cvv;
     private String pinCode;
 
-    public Card(String numberCard, String bestBeforeDate, String cvv) {
+    public Card1(String numberCard, String bestBeforeDate, String cvv) {
         this.numberCard = numberCard;
         this.bestBeforeDate = bestBeforeDate;
         this.cvv = cvv;
 
     }
-
-    public String getPinCode() {
-        return pinCode;
-    }
-
-    public String setPinCode(String pinCode1) {
-        this.pinCode = pinCode1;
-        return pinCode1;
-    }
-
-    public String getNumberCard() {
-        return numberCard;
-    }
-
-    public void setNumberCard(String numberCard1) {
-        this.numberCard= numberCard;
-    }
-
+//
+//    public String getPinCode1() {
+//        return pinCode;
+//    }
+//
+//    public String setPinCode1(String pinCode) {
+//        this.pinCode = pinCode;
+//        return pinCode;
+//    }
+//
+//    public String getNumberCard() {
+//        return numberCard;
+//    }
+//
+//    public String getNumberCard() {
+//        return numberCard;
+//    }
+//
+//    public void setNumberCard(String numberCard) {
+//        this.numberCard = numberCard;
+//    }
+//
+//    public String getPinCode() {
+//        return pinCode;
+//    }
+//
+//    public String setPinCode(String pinCode) {
+//        this.pinCode = pinCode;
+//        return pinCode;
+//    }
 
     public void getCard() {
 
@@ -40,15 +52,13 @@ public class Card {
         System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4)); // шаблон "1234 5678 9012 3456";
         //System.out.println( " **** **** **** " + cartNumberWithoutSpaces.substring(cartNumberWithoutSpaces.length()-4)); // удалили пробелы
     }
-    //
+//
     public void getCard(String newPinCode) {
         /**
          * ●	Опишите в классе метод, который принимает на вход пин-код. Если переданный пин-код совпал с пин-кодом карты, напечатать в консоль номер карты без маски (все цифры)
          */
-        if (pinCode.equals(this.pinCode)) {
+         if (pinCode.equals(this.pinCode)) {
             System.out.println(this.numberCard);
         }else { System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4));}//getCard();
     }
-
-
 }
