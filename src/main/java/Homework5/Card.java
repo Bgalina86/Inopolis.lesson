@@ -6,11 +6,24 @@ public class Card {
     private String cvv;
     private String pinCode;
 
-    public Card(String numberCard, String bestBeforeDate, String cvv, String pinCode) {
+    public Card(String numberCard, String bestBeforeDate, String cvv) {
         this.numberCard = numberCard;
         this.bestBeforeDate = bestBeforeDate;
         this.cvv = cvv;
+
+    }
+
+    public String getPinCode() {
+        return pinCode;
+    }
+
+    public String setPinCode(String pinCode) {
         this.pinCode = pinCode;
+        return pinCode;
+    }
+
+    public String getNumberCard() {
+        return numberCard;
     }
 
     public void getCard() {
@@ -27,11 +40,9 @@ public class Card {
         /**
          * ●	Опишите в классе метод, который принимает на вход пин-код. Если переданный пин-код совпал с пин-кодом карты, напечатать в консоль номер карты без маски (все цифры)
          */
-        String userPinCode = "";
-
-        if (userPinCode.equals(pinCode)) {
+         if (pinCode.equals(this.pinCode)) {
             System.out.println(this.numberCard);
-        }else {getCard();}
+        }else { System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4));}//getCard();
     }
 
 //    public void getPinCodeAndNumberCard(String s) {
