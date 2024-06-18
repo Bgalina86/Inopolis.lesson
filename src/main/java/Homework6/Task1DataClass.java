@@ -2,12 +2,15 @@ package Homework6;
 
 /**
  * ОпишитеклассPlayer(игрок)
- * ●Уигрокаестьполя:○id(int)○nickname(String)○isOnline(boolean)
- * ●Всеполядолжныбытьприватными
- * ●Переопределитедляклассаметодыequals(),hashCode()иtoString()
- * ●Вотдельномклассесоздайтедвухигроковсодинаковымизначениямиполей.
- * ●Убедитесь,чтоplayer1==player2==>false
- * ●Убедитесь,чтоplayer1.equals(player2)==>true
+ * ●У игрока есть поля:
+ * ○id(int)
+ * ○nickname(String)
+ * ○isOnline(boolean)
+ * ●Все поля должны быть приватными
+ * ●Переопределите для класса методы equals(),hashCode()иtoString()
+ * ●В отдельном классе создайте двух игроков с одинаковыми значениями полей.
+ * ●Убедитесь,что player1==player2==>false
+ * ●Убедитесь,что player1.equals(player2)==>true
  */
 public class Task1DataClass {
 
