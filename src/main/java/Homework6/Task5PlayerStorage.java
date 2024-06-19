@@ -1,4 +1,14 @@
 package Homework6;
+/**
+ * Турнир игроков
+ * ●В задании 1 высоздали класс Player
+ * ●Создайте хранилище игроков.Его будет использовать программа, которая описывает турнир.
+ * Требования:
+ * ○Количество игроков не известно заранее. Может быть 2,а может 100
+ * ○В турнир каждый игрок может записаться только 1 раз(не может быть дублей)
+ * ● создайте 10 игроков и поместите их в хранилище.
+ * ●убедитесь, что если один игрок помещен в хранилище дважды, дубликат не запишется
+ */
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,7 +56,7 @@ public class Task5PlayerStorage
         playerStorage.addPlayer(7, new Player(7,"Milena",true));
         playerStorage.addPlayer(8, new Player(8,"Pati",true));
         playerStorage.addPlayer(9, new Player(9,"Lili",true));
-        playerStorage.addPlayer(10, new Player(10,"Milena",true));// error, duplicate player
+        playerStorage.addPlayer(7, new Player(7,"Milena",true));// error, duplicate player
 
         playerStorage.showAllPlayers();
 

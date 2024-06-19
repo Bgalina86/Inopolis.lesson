@@ -1,5 +1,5 @@
 package Homework6;
-/**
+/** Вариант 2 решения задачи
  * Вложенный список
  * ●создайте класс Company(кинокомпания)
  * ●в классе создайте поля:
@@ -9,7 +9,7 @@ package Homework6;
  * ●создайте в другом классе метод psvm.
  * ●в этом методе объявите список companies
  * ●положите в список 3 кинокомпании
- * ●каждой кинокомпании запишите в портфолиопо 3 фильма
+ * ●каждой кинокомпании запишите в портфолио по 3 фильма
  * ●напечатайте информацию о всех компаниях в формате
  * {названиекомпании}:{названиявсехфильмов}
  */
@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Task4NestedList2 {
+public class Task4NestedListV2 {
 
     public static void main(String[] args)
     {
