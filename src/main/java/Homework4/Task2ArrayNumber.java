@@ -19,15 +19,9 @@ public class Task2ArrayNumber {
         String value1 = String.format("%.5f", 1.00000000000000);
         ArrayOfDoubleNumder[2] = value1;
 
-//        //Вывод на экран элементов из массива с точностью до 5 знака после запятой
-//        System.out.printf("Пи: " + "%.5f", ArrayOfDoubleNumder[0]);
-//        System.out.printf("\n E: " + "%.5f", ArrayOfDoubleNumder[1]);
-//        System.out.printf("\n 1: " + "%.5f", ArrayOfDoubleNumder[2]);
-//
+        // Вывод данных на экран
         System.out.println(ArrayOfDoubleNumder[0]);
         System.out.println(ArrayOfDoubleNumder[1]);
         System.out.println(ArrayOfDoubleNumder[2]);
     }
-
-
 }

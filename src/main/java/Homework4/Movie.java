@@ -3,6 +3,7 @@ package Homework4;
 import java.util.SplittableRandom;
 
 public class Movie {
+
     String name;
     double rating;
     String genre;

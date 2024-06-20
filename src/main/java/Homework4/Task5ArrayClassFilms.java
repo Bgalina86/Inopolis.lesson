@@ -19,12 +19,11 @@ public class Task5ArrayClassFilms {
         films[2].year = 2024;
 
         // Организация вывода элементов массива с помощью цикла for
-        for (int i = 0; i< films.length; i=i+1){
+        for (int i = 0; i < films.length; i = i + 1) {
             System.out.println("i = " + i);
-            String  info = "Год: " + films[i].year + " Название фильма: " + films[i].name + " Жанр: " + films[i].genre + " Рейтиинг: " + films[i].rating ;
+            String info = "Год: " + films[i].year + " Название фильма: " + films[i].name + " Жанр: "
+                + films[i].genre + " Рейтиинг: " + films[i].rating;
             System.out.println(info);
         }
-
     }
-
 }

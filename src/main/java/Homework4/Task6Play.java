@@ -25,9 +25,8 @@ public class Task6Play {
         names[9] = "Вика";
 
         // Вывод на экран первых трех
-        for (int i = 0; i< 3; i=i+1){
+        for (int i = 0; i < 3; i = i + 1) {
             System.out.println(names[i]);
         }
     }
-
 }

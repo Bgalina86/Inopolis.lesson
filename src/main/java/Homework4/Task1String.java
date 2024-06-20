@@ -20,5 +20,4 @@ public class Task1String {
         todoList[3] = "Приготовить завтрак";
         todoList[4] = "Позавтракать";
     }
-
 }

@@ -11,7 +11,5 @@ public class Task4LongNumber {
             //Вывод на экран
             System.out.println(i);
         }
-
     }
-
 }

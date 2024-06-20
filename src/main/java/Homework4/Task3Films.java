@@ -36,8 +36,5 @@ public class Task3Films {
 
         // Вывод массивов на экран
         System.out.println(Film1 + "\n" + Film2 + "\n" + Film3);
-
-
     }
-
 }
