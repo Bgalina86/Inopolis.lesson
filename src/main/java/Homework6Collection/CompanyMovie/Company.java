@@ -1,4 +1,4 @@
-package Homework6;
+package Homework6Collection.CompanyMovie;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,17 +9,12 @@ public class Company {
 
     private String name;
     private String year;
-    private List<String> films;
+    private List<Film> filmsList;
 
-    public Company(String name)
-    {
+    public Company(String name, String year) {
         this.name = name;
-    }
-
-    public Company(String title, List<String> movies)
-    {
-        name = title;
-        films = movies;
+        this.year = year;
+        this.filmsList = new ArrayList<>();
     }
 
     public String getName(String s) {
@@ -38,12 +33,12 @@ public class Company {
         this.year = year;
     }
 
-    public List<String> getFilms() {
-        return films;
+    public List<Film> getFilms() {
+        return filmsList;
     }
 
-    public void setFilms(List<String> films) {
-        this.films = films;
+    public void addFilm(Film film) {
+        this.filmsList.add(film);
     }
 
     @Override
@@ -56,12 +51,12 @@ public class Company {
         }
         Company company = (Company) o;
         return Objects.equals(name, company.name) && Objects.equals(year,
-            company.year) && Objects.equals(films, company.films);
+            company.year) && Objects.equals(filmsList, company.filmsList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, year, films);
+        return Objects.hash(name, year, filmsList);
     }
 
     @Override
@@ -69,7 +64,7 @@ public class Company {
         return "Company{" +
             "name='" + name + '\'' +
             ", year='" + year + '\'' +
-            ", films=" + films +
+            ", filmList=" + filmsList +
             '}';
     }
 }

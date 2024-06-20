@@ -1,6 +1,5 @@
 package Consult;
 
-import Homework6.Company;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;

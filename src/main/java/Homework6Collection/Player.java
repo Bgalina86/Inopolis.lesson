@@ -1,8 +1,9 @@
-package Homework6;
+package Homework6Collection;
 
 import java.util.Objects;
 
 public class Player {
+
     private int id;
     private String nickname;
     private boolean isOnline;
@@ -12,7 +13,7 @@ public class Player {
         return points;
     }
 
-    public void setPoints(int points) {
+    public void setPoints(int id,int points) {
         this.points = points;
         return;
     }
@@ -75,7 +76,7 @@ public class Player {
             '}';
     }
 
-    public int score(){
+    public int score() {
 
         return 0;
     }

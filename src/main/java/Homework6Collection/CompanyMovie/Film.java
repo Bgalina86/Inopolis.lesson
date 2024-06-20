@@ -1,8 +1,9 @@
-package Homework6.CompanyMovie;
+package Homework6Collection.CompanyMovie;
 
 import java.util.Objects;
 
 public class Film {
+
     private String name;
     private double rating;
     private String genre;

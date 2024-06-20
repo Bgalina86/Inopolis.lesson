@@ -1,4 +1,17 @@
-package Homework6;
+package Homework6Collection;
+/**
+ * Турнирная таблица
+ * ● В задании 1 вы создали класс Player
+ * ● Создайте Map<Player, Integer> points для хранения очков игроков
+ * ● Положите в мэпу 10 игроков. У каждого 0 очков.
+ * ● Игроку с id=4 запишите 10 очков
+ * ● Игроку с id=7 – 12 очков
+ * ● Игроку с id=8 – 11 очков
+ * ● Игроку с id=9 – 13 очков
+ * ● Игроку с id=10 – 5 очков
+ * ● Выведите на экран 3х лучших игроков турнира*
+ * ● На первом месте должен быть игрок с максимальным результатом
+ */
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,9 +53,6 @@ public class Task6PlayersStoragePoint {
         playerStorage.addPlayer(9, new Player(9, "Lili", true));
         playerStorage.addPlayer(10, new Player(10, "Milena", true));
 
-     
-
         playerStorage.showAllPlayers();
-
     }
 }

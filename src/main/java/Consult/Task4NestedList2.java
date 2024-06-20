@@ -1,6 +1,6 @@
 package Consult;
 
-import Homework6.Company;
+import Homework6Collection.Company;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
