@@ -1,6 +1,7 @@
 package Homework5;
 
 public class Card {
+
     private String numberCard;
     private String bestBeforeDate;
     private String cvv;
@@ -27,9 +28,8 @@ public class Card {
     }
 
     public void setNumberCard(String numberCard1) {
-        this.numberCard= numberCard;
+        this.numberCard = numberCard;
     }
-
 
     public void getCard() {
 
@@ -37,18 +37,20 @@ public class Card {
         String cartNumberWithoutSpaces = numberCard.replace(" ", "");
 
         //Вывод на экран
-        System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4)); // шаблон "1234 5678 9012 3456";
+        System.out.println(" **** **** **** " + numberCard.substring(
+            numberCard.length() - 4)); // шаблон "1234 5678 9012 3456";
         //System.out.println( " **** **** **** " + cartNumberWithoutSpaces.substring(cartNumberWithoutSpaces.length()-4)); // удалили пробелы
     }
-    //
+
+    /**
+     * ●	Опишите в классе метод, который принимает на вход пин-код. Если переданный пин-код совпал с
+     * пин-кодом карты, напечатать в консоль номер карты без маски (все цифры)
+     */
     public void getCard(String newPinCode) {
-        /**
-         * ●	Опишите в классе метод, который принимает на вход пин-код. Если переданный пин-код совпал с пин-кодом карты, напечатать в консоль номер карты без маски (все цифры)
-         */
         if (pinCode.equals(this.pinCode)) {
             System.out.println(this.numberCard);
-        }else { System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4));}//getCard();
+        } else {
+            System.out.println(" **** **** **** " + numberCard.substring(numberCard.length() - 4));
+        }
     }
-
-
 }

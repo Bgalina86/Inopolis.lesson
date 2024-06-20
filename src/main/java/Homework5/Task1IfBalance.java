@@ -7,13 +7,10 @@ package Homework5;
 public class Task1IfBalance {
 
     public static void main(String[] args) {
-
         int balance;
         balance = 10;
-
         if (balance == 10) {
             System.out.println("Десятка");
         }
     }
-
 }

@@ -34,5 +34,4 @@ public class Task2IfEvenOrOdd {
             System.out.println("Нечетное число");
         }
     }
-
 }
