@@ -1,4 +1,4 @@
-package Homework6Collection.CompanyMovie;
+package Homework6Collection.Tassk_4_CompanyMovie;
 /**
  * Вложенный список
  * ●создайте класс Company(кинокомпания)

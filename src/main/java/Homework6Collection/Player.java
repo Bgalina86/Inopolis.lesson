@@ -1,5 +1,8 @@
 package Homework6Collection;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Player {
@@ -9,19 +12,15 @@ public class Player {
     private boolean isOnline;
     private int points;
 
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int id,int points) {
+    public void addPoint(int id, int points) {
         this.points = points;
-        return;
     }
 
     public Player(int id, String nickname, boolean isOnline) {
         this.id = id;
         this.nickname = nickname;
         this.isOnline = isOnline;
+        this.points = points;
     }
 
     public int getId() {
@@ -79,5 +78,9 @@ public class Player {
     public int score() {
 
         return 0;
+    }
+
+    public int getPoints() {
+        return points;
     }
 }

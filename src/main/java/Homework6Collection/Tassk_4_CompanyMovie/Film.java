@@ -1,4 +1,4 @@
-package Homework6Collection.CompanyMovie;
+package Homework6Collection.Tassk_4_CompanyMovie;
 
 import java.util.Objects;
 
