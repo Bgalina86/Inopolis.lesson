@@ -1,14 +1,8 @@
-package Homework7;
+package Homework7.testClassNotHomework;
 
-import java.io.InputStream;
-import java.util.Scanner;
+public class DeclinationDateTime {
 
-public class Test1 {
-
-    public static void main(String[] args) {
-        System.out.print("Введите дату публикации: "); //Вопрос про время ппуббликации
-        Integer input = Integer.valueOf(new Scanner(System.in).nextLine());
-
+    public static void main(Integer input) {
         if (input <= 60) {
             if ((((input > 5) && (input < 10)) || ((input > 11) && (input < 20))) && (input % 10
                 == 1)) {

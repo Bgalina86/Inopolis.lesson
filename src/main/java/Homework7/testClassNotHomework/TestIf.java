@@ -1,4 +1,4 @@
-package Homework7;
+package Homework7.testClassNotHomework;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
