@@ -1,36 +1,30 @@
 package Homework8;
 
 import java.util.Collection;
+import java.util.Scanner;
+
 // управляющий файл для всех типов файлов
-public class TaskClass  {
+public class TaskClass {
     public static void main(String[] args) {
+        PlayerServiceJSON playerServiceJSON = new PlayerServiceJSON();
+        PlayerService service = new PlayerServiceJSON();
+        System.out.println("Укажите источник: ");
+        Scanner scanner = new Scanner(System.in);
+        String source = scanner.nextLine();
 
-        PlayerService service = new PlayerService() {
-            @Override
-            public Player getPlayerById(int id) {
-                return null;
-            }
+        PlayerService dh = null;
 
-            @Override
-            public Collection<Player> getPlayers() {
-                return null;
-            }
+//        if (source.startsWith("x")){
+//            dh = new XmlHelper();
+//        }
 
-            @Override
-            public int createPlayer(String nickname) {
-                return 0;
-            }
+        if (source.startsWith("j")){
+            dh = new PlayerServiceJSON();
+        }
 
-            @Override
-            public Player deletePlayer(int id) {
-                return null;
-            }
-
-            @Override
-            public int addPoints(int playerId, int points) {
-                return 0;
-            }
-        };
+//        if (source.startsWith("d")){
+//            dh = new DbHelper();
+//        }
 
         int playerId = service.createPlayer("WinMaster_777");
         service.addPoints(playerId, 100);

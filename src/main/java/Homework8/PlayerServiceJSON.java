@@ -1,9 +1,13 @@
 package Homework8;
 
+import java.nio.file.Path;
 import java.util.Collection;
 // обработка файла
 public class PlayerServiceJSON implements PlayerService{
 
+    Path filePath = Path.of("src/main/java/Homework8/recurs/PlayerService1.json");
+    Path listFilePath = Path.of("src/main/java/Homework8/recurs/PlayerServiceNew.json");
+    // mapper.writeValue(filePath.toFile(), PlayerService1);//запись в файл
     // получить игрока по id
     public Player getPlayerById(int id) {
         return null;
