@@ -12,7 +12,7 @@ import java.util.List;
 public class PlayerServiceJSON implements PlayService {
 
     int i = 0;
-    private Path filePath = Path.of("src/main/java/Homework8/test.xml");
+    private Path filePath = Path.of("src/main/java/Homework8/test.json");
     private List<Player> playerList = new ArrayList();
 
     @Override
