@@ -1,9 +1,12 @@
-package Homework8;
+package Homework8.proba;
+
+//import jakarta.xml.bind.JAXBException;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
-public interface PlayerService {
+public interface PlayService {
     // получить игрока по id
     Player getPlayerById(int id) throws IOException;//, JAXBException;
 
