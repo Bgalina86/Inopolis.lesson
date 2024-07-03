@@ -45,8 +45,8 @@ public class Task1DateTimeDeclination {
 //        String  datePublish = new PublishDateTime().processDate();
 //        String  timePublish = new PublishDateTime().processTime();
         //Тестовые данные
-        String datePublish = "2024 июн. 29";
-        String timePublish = "20:23";
+        String datePublish = "2024 июл. 03";
+        String timePublish = "13:23";
 
         //Парсим дату и время в минуты
         long publishDate = (new PublishDateTime()).publishDate(datePublish);

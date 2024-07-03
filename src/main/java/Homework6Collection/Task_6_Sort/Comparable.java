@@ -13,5 +13,5 @@ public interface Comparable<Player> {
 
     default void compareTo(Player otherPlayer) {}
 
-   // int compare(Homework6Collection.Player firstPlayer, Homework6Collection.Player secondPlayer);
+   // int compare(Homework6Collection.PlayerProba firstPlayer, Homework6Collection.PlayerProba secondPlayer);
 }

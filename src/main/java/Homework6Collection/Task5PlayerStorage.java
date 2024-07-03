@@ -1,6 +1,6 @@
 package Homework6Collection;
 /**
- * Турнир игроков ●В задании 1 высоздали класс Player ●Создайте хранилище игроков.Его будет
+ * Турнир игроков ●В задании 1 высоздали класс PlayerProba ●Создайте хранилище игроков.Его будет
  * использовать программа, которая описывает турнир. Требования: ○Количество игроков не известно
  * заранее. Может быть 2,а может 100 ○В турнир каждый игрок может записаться только 1 раз(не может
  * быть дублей) ● создайте 10 игроков и поместите их в хранилище. ●убедитесь, что если один игрок
@@ -21,7 +21,7 @@ public class Task5PlayerStorage {
     //Сообщение о дубликате
     public void addPlayer(int code, Player player) {
         if (_players.containsKey(code)) {
-            System.out.println("Player already exists");
+            System.out.println("PlayerProba already exists");
             return;
         }
         _players.put(code, player);

@@ -1,12 +1,20 @@
 package Homework8;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 
+@XmlRootElement
 public class Player {
+    @JsonProperty("id")
     private int id;
+    @JsonProperty("nick")
     private String nick;
+    @JsonProperty("points")
     private int points;
+    @JsonProperty("isOnline")
     private boolean isOnline;
+public Player(){}
 
     public Player(int id, String nick, int points, boolean isOnline) {
         this.id = id;
@@ -61,7 +69,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "PlayerProba{" +
             "id=" + id +
             ", nick='" + nick + '\'' +
             ", points=" + points +

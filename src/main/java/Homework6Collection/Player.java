@@ -68,7 +68,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "PlayerProba{" +
             "id=" + id +
             ", nicname='" + nickname + '\'' +
             ", isOnline=" + isOnline +

@@ -1,11 +1,12 @@
 package Homework8;
 
+import jakarta.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;
 
 public interface PlayerService {
     // получить игрока по id
-    Player getPlayerById(int id) throws IOException;//, JAXBException;
+    Player getPlayerById(int id) throws IOException, JAXBException;
 
     // получить список игроков
     List<Player> getPlayers() throws IOException;
@@ -14,15 +15,21 @@ public interface PlayerService {
     int createPlayer(String nickname) throws IOException;
 
 
-    void writePlayersToFile(List<Player> players) throws IOException;//, JAXBException;
+    void writePlayersToFile(List<Player> players) throws IOException, JAXBException;
 
-    List<Player> readPlayersFromFile() throws IOException;//, JAXBException;
+    List<Player> readPlayersFromFile() throws IOException, JAXBException;
 
     // удалить игрока по id'шнику, вернет удаленного игрока
-    Player deletePlayer(int id) throws IOException;//, JAXBException;
+    Player deletePlayer(int id) throws IOException, JAXBException;
 
     // добавить очков игроку. Возвращает обновленный счет
-    int addPoints(int playerId, int points) throws IOException;//, JAXBException;
+    int addPoints(int playerId, int points) throws IOException, JAXBException;
 
-    List <Player> printPlayersFromFile (List<Player> playersToPrint) throws IOException;//, JAXBException;
+    List <Player> printPlayersFromFile (List<Player> playersToPrint) throws IOException, JAXBException;
+
+    int addPlayer(String name);
+
+    String removePlayer(int id);
+
+    List<String> getLeaderBoard();
 }
