@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.Objects;
 
 
-@XmlRootElement(name="playerlist")
+@XmlRootElement(name = "playerlist")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Players {
 
 
-    @XmlElement(name="player")
-        private List<Player> playerList;
+    @XmlElement(name = "player")
+    private List<Player> playerList;
 
     public Players(List<Player> playerList) {
         this.playerList = playerList;
@@ -34,8 +34,12 @@ public class Players {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Players players = (Players) o;
         return Objects.equals(playerList, players.playerList);
     }

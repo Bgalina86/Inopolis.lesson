@@ -10,7 +10,8 @@ import java.util.List;
 
 
 // обработка файла
-public class PlayerServiceJSON  implements PlayerService{
+public class PlayerServiceJSON implements PlayerService {
+
     int i = 0;
     private Path filePath = Path.of("src/main/java/Homework8/recurs/logDeleteJSON.json");
     private Path listFilePath = Path.of("src/main/java/Homework8/recurs/PlayerServiceNew.json");
@@ -33,7 +34,7 @@ public class PlayerServiceJSON  implements PlayerService{
             if (currentPlayer.getId() == id) {
                 System.out.println("\nИгрок с id = " + id);
                 System.out.println(currentPlayer);
-                mapper.writeValue(filePath.toFile(),currentPlayer);
+                mapper.writeValue(filePath.toFile(), currentPlayer);
                 return currentPlayer;
             }
         }
@@ -77,15 +78,19 @@ public class PlayerServiceJSON  implements PlayerService{
     }
 
     public List<Player> readPlayersFromFile() throws IOException {
-       ObjectMapper mapper = new ObjectMapper();
-        List<Player> fromPlayersFile = mapper.readValue(listFilePath.toFile(), new TypeReference<>() {});
+        ObjectMapper mapper = new ObjectMapper();
+        List<Player> fromPlayersFile = mapper.readValue(listFilePath.toFile(),
+            new TypeReference<>() {
+            });
         return fromPlayersFile;
     }
 
-    public List<Player> printPlayersFromFile(List<Player> playersToPrint) throws IOException{
+    public List<Player> printPlayersFromFile(List<Player> playersToPrint) throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
-        List<Player> fromPlayersFile = mapper.readValue(listFilePath.toFile(), new TypeReference<>() {});
+        List<Player> fromPlayersFile = mapper.readValue(listFilePath.toFile(),
+            new TypeReference<>() {
+            });
         for (Player currentPlayer : fromPlayersFile) {
             System.out.println(currentPlayer);
         }
@@ -106,5 +111,4 @@ public class PlayerServiceJSON  implements PlayerService{
     public List<String> getLeaderBoard() {
         return null;
     }
-
 }

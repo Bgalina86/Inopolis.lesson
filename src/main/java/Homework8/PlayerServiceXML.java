@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerServiceXML implements PlayerService {
+
     private int i;
     private Path filePath = Path.of("src/main/java/Homework8/recurs/logDeleteXML.xml");
     private Path listFilePath = Path.of("src/main/java/Homework8/recurs/PlayerServiceNewXML.xml");
@@ -24,7 +25,7 @@ public class PlayerServiceXML implements PlayerService {
             if (currentPlayer.getId() == id) {
                 System.out.println("\nИгрок с id = " + id);
                 System.out.println(currentPlayer);
-                mapper.writeValue(filePath.toFile(),currentPlayer);
+                mapper.writeValue(filePath.toFile(), currentPlayer);
                 return currentPlayer;
             }
         }
@@ -33,7 +34,7 @@ public class PlayerServiceXML implements PlayerService {
 
     @Override
     public List<Player> getPlayers() throws IOException {
-        return  this.playerList;
+        return this.playerList;
     }
 
     @Override
@@ -57,6 +58,7 @@ public class PlayerServiceXML implements PlayerService {
         writePlayersToFile(allPlayers);
         return null;
     }
+
     @Override
     public int addPoints(int playerId, int points) throws JAXBException {
         List<Player> allPlayers = readPlayersFromFile();
@@ -90,7 +92,7 @@ public class PlayerServiceXML implements PlayerService {
         JAXBContext context = JAXBContext.newInstance(Player.class, Players.class);
         Unmarshaller unmarshaller = context.createUnmarshaller();
         Players unmarshalPlayers = (Players) unmarshaller.unmarshal(listFilePath.toFile());
-        for (Player currentplayer:unmarshalPlayers.getPlayerList()){
+        for (Player currentplayer : unmarshalPlayers.getPlayerList()) {
             System.out.println(currentplayer);
         }
         return null;
@@ -98,8 +100,7 @@ public class PlayerServiceXML implements PlayerService {
 
     @Override
     public int addPlayer(String name) {
-
-return 0;
+        return 0;
     }
 
     @Override

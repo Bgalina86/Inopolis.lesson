@@ -1,3 +1,4 @@
+
 package Homework8;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,7 +15,7 @@ public class Player {
     private int points;
     @JsonProperty("isOnline")
     private boolean isOnline;
-public Player(){}
+    public Player(){}
 
     public Player(int id, String nick, int points, boolean isOnline) {
         this.id = id;

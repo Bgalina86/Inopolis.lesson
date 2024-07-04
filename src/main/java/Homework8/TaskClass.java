@@ -11,6 +11,7 @@ public class TaskClass {
         int playerId;
         List<String> myPlayersList = List.of("Platinum", "Live545", "Strit34", "Tarakan33", "Ula67",
             "Super67", "Ice66");
+        //Работа с JSON
         PlayerService serviceJson = new PlayerServiceJSON();
 
         for (String nickname : myPlayersList) {
@@ -35,34 +36,31 @@ public class TaskClass {
         serviceJson.getPlayerById(playerId);
         System.out.print("\nИтоговый список игроков из json файла: \n");
         serviceJson.printPlayersFromFile(serviceJson.getPlayers());
-
-
+// работа с XML
         PlayerService serviceXml = new PlayerServiceXML();
 
-        for(String nickname:myPlayersList){
-        serviceXml.createPlayer(nickname);
-    }
+        for (String nickname : myPlayersList) {
+            serviceXml.createPlayer(nickname);
+        }
         serviceXml.writePlayersToFile(serviceXml.getPlayers());
         System.out.print("\n\nНачальный список игроков из xml файла: \n");
         serviceXml.printPlayersFromFile(serviceXml.getPlayers());
 
-    //удаление игрока по его id
-    playerId = 2;
+        //удаление игрока по его id
+        playerId = 2;
         serviceXml.deletePlayer(playerId);
         serviceXml.printPlayersFromFile(serviceXml.getPlayers());
 
-    //получение игрока по его id;
-    playerId = 1;
+        //получение игрока по его id;
+        playerId = 1;
         serviceXml.getPlayerById(playerId);
         serviceXml.printPlayersFromFile(serviceXml.getPlayers());
 
-    //добавление очков по id игрока
-    playerId = 4;
+        //добавление очков по id игрока
+        playerId = 4;
         serviceXml.addPoints(playerId, 5);
         System.out.println("\nИгроку с id = " + playerId + " добавлены очки");
         System.out.print("\nИтоговый список игроков из xml файла: \n");
         serviceXml.printPlayersFromFile(serviceXml.getPlayers());
-
-
     }
 }
