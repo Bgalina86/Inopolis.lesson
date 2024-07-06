@@ -12,7 +12,7 @@ private Integer humiditySensor;
     @Override
     public void makeHumiditySensor() {
         Random random=new Random();
-        humiditySensor = random.nextInt(101);
+        humiditySensor = 15 + random.nextInt(86);
 
     }
 }
