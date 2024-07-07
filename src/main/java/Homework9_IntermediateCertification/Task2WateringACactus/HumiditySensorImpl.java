@@ -3,16 +3,17 @@ package Homework9_IntermediateCertification.Task2WateringACactus;
 import java.util.Random;
 
 public class HumiditySensorImpl implements HumiditySensor {
-private Integer humiditySensor;
+
+    int humiditySensor;
     @Override
-    public Integer getHumiditySensor() {
+    public int getHumiditySensor() {
         return humiditySensor;
     }
 
     @Override
-    public void makeHumiditySensor() {
-        Random random=new Random();
+    public int makeHumiditySensor(int humiditySensor) {
+        Random random = new Random();
         humiditySensor = 15 + random.nextInt(86);
-
+        return humiditySensor;
     }
 }
