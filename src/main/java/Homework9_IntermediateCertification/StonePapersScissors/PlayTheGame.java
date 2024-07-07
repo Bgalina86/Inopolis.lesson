@@ -13,7 +13,7 @@ public class PlayTheGame {
 
         for (int round = 1; round <= 5; round++) {
             System.out.println("\nРаунд " + round);
-            System.out.println("Ваш ход: (к)амень, (н)ожницы, (б)умага");
+            System.out.println("Ваш ход: (К)амень, (Н)ожницы, (Б)умага");
             StonePaperScissors newRound = new StonePaperScissors();
 
             userChar = newRound.getUserChar();
@@ -32,7 +32,7 @@ public class PlayTheGame {
                     computerScore = computerScore + newRound.getScore(computerChar);
                     break;
                 }
-                default:break;//обработка ничья
+                default:break;
             }
             System.out.println("Результат раунда: " + roundResult);
             System.out.println("У пользователя: " + userScore);

@@ -70,7 +70,7 @@ public class StonePaperScissors {
 
     public String getComputerChar() {
         Random random = new Random();
-        char[] symbols = {'к', 'н', 'б'};
+        char[] symbols = {'К', 'Н', 'Б'};
         int randomIndex = random.nextInt(symbols.length);
         this.computerChar = String.valueOf(symbols[randomIndex]);
 

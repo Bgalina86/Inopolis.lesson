@@ -1,34 +1,12 @@
 package Homework9_IntermediateCertification;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 public class Task3MaxTwo {
-    public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        String pattern = "\\d+(\\s\\d+)*"; // Паттерн для строки чисел, разделенных пробелами
-
-
-        System.out.print("Введите строку чисел через пробел: ");
-        String input = scanner.nextLine();
-
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(input);
-
-        if(!m.matches()) {
-            System.out.println("Строка НЕ соответствует паттерну.");
-            System.exit(0);
-        }
-
-//рандомно задать длинну массива
-//рандомно заполнить массив
-
-        String [] numberCharsArray = input.split(" ");
-
+    private static void SortArray(String[] numberCharsArray) {
         int[] numbers = new int[numberCharsArray.length];
         try {
-            for (int i = 0; i < numberCharsArray.length; i++) {   //перемещаем массив строк в массив чисел
+            for (int i = 0; i < numberCharsArray.length;
+                i++) {   //перемещаем массив строк в массив чисел
                 numbers[i] = Integer.parseInt(numberCharsArray[i]);
             }
         } catch (NumberFormatException n) {
@@ -45,9 +23,20 @@ public class Task3MaxTwo {
                 preLargest = number;
             }
         }
-
         System.out.println("Второй по величине элемент массива: " + preLargest);
+    }
 
-        scanner.close();
+    public static void main(String[] args) {
+        //тестовые данные
+        String[] sortArrayTwoMax1 = {"1", "5", "7", "6", "4", "3", "5"};//6
+        String[] sortArrayTwoMax2 = {"9", "5", "7", "6", "4", "3", "8"};//8
+        String[] sortArrayTwoMax3 = {"1", "5", "7", "6", "4", "8", "5"};//7
+        String[] sortArrayTwoMax4 = {"1", "8", "7", "6", "4", "9", "5"};//8
+
+        //Обработка массива
+        SortArray(sortArrayTwoMax1);
+        SortArray(sortArrayTwoMax2);
+        SortArray(sortArrayTwoMax3);
+        SortArray(sortArrayTwoMax4);
     }
 }
