@@ -13,8 +13,8 @@ import java.util.List;
 public class PlayerServiceJSON implements PlayerService {
 
     int i = 0;
-    private Path filePath = Path.of("src/main/java/Homework8/recurs/logDeleteJSON.json");
-    private Path listFilePath = Path.of("src/main/java/Homework8/recurs/PlayerServiceNew.json");
+    private Path filePath = Path.of("src/main/java/Homework8/resources/logDeleteJSON.json");
+    private Path listFilePath = Path.of("src/main/java/Homework8/resources/PlayerServiceNew.json");
     private List<Player> playerList = new ArrayList();
 
 

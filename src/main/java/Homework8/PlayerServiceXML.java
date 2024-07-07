@@ -13,8 +13,8 @@ import java.util.List;
 public class PlayerServiceXML implements PlayerService {
 
     private int i;
-    private Path filePath = Path.of("src/main/java/Homework8/recurs/logDeleteXML.xml");
-    private Path listFilePath = Path.of("src/main/java/Homework8/recurs/PlayerServiceNewXML.xml");
+    private Path filePath = Path.of("src/main/java/Homework8/resources/logDeleteXML.xml");
+    private Path listFilePath = Path.of("src/main/java/Homework8/resources/PlayerServiceNewXML.xml");
     private List<Player> playerList = new ArrayList();
 
     @Override
