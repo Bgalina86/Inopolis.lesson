@@ -1,6 +1,5 @@
 package Homework9_IntermediateCertification.StonePapersScissors;
 
-import java.io.IOException;
 import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
@@ -15,21 +14,26 @@ public class StonePaperScissors {
     public StonePaperScissors() {
     }
 
+    //Начисляемые баллы при выигранной ситуации
     public int getScore(String input) {
-        if (input.equals("К")) return 1;
-        else if (input.equals("Н")) return 2;
-        else return 5;
+        if (input.equals("К")) {
+            return 1;
+        } else if (input.equals("Н")) {
+            return 2;
+        } else {
+            return 5;
+        }
 
     }
 
-
+    //Результат игры 1 раунда
     public String getRoundWinner(String userChar, String computerChar) {
 
         this.userChar = userChar;
         this.computerChar = computerChar;
 
         if (this.userChar.equals(computerChar)) {
-            return "nobody";
+            return "Ничья!";
         } else if ((this.userChar.equals("К") && this.computerChar.equals("Н") ||
             this.userChar.equals("Н") && this.computerChar.equals("Б") ||
             this.userChar.equals("Б") && this.computerChar.equals("К"))) {
@@ -39,15 +43,14 @@ public class StonePaperScissors {
         }
     }
 
-
-    public String getUserChar() throws IOException {
+    //Обработка вводимых значений
+    public String getUserChar() {
         boolean hasRightLetter = false;
-
-
         do {
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
-            String pattern = "[КНБ]"; // Паттерн для строки чисел, разделенных пробелами
+            // Паттерн для строки чисел, разделенных пробелом
+            String pattern = "[КНБ]";
 
             Pattern p = Pattern.compile(pattern);
             Matcher m = p.matcher(input);
@@ -56,11 +59,9 @@ public class StonePaperScissors {
                 hasRightLetter = true;
                 this.userChar = input;
             } else {
-                System.out.println("Вы ввели неправильную букву, попробуйде еще раз:");
+                System.out.println("Введите правильную букву:");
             }
         } while (!hasRightLetter);
-
-
         return this.userChar;
     }
 
@@ -68,6 +69,7 @@ public class StonePaperScissors {
         this.userChar = userChar;
     }
 
+    //Организация вывода случайного значения игроком - компьютер
     public String getComputerChar() {
         Random random = new Random();
         char[] symbols = {'К', 'Н', 'Б'};
@@ -83,8 +85,12 @@ public class StonePaperScissors {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         StonePaperScissors that = (StonePaperScissors) o;
         return userChar == that.userChar && computerChar == that.computerChar;
     }

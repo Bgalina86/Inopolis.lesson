@@ -3,14 +3,14 @@ package Homework9_IntermediateCertification.StonePapersScissors;
 import java.io.IOException;
 
 public class PlayTheGame {
+
     public static void main(String[] args) throws IOException {
 
         String userChar, computerChar;
         int userScore = 0, computerScore = 0;
         String roundResult;
 
-        System.out.println("Игра \"Камень, ножницы, бумага\"!");
-
+        //Организация цикла на 5 раундов
         for (int round = 1; round <= 5; round++) {
             System.out.println("\nРаунд " + round);
             System.out.println("Ваш ход: (К)амень, (Н)ожницы, (Б)умага");
@@ -27,17 +27,18 @@ public class PlayTheGame {
             switch (roundResult) {
                 case "user": {
                     userScore = userScore + newRound.getScore(userChar);
-                    break;}
+                    break;
+                }
                 case "computer": {
                     computerScore = computerScore + newRound.getScore(computerChar);
                     break;
                 }
-                default:break;
-            }
+                default:
+                    break;
+            }//Печатаем итог после каждого раунда
             System.out.println("Результат раунда: " + roundResult);
             System.out.println("У пользователя: " + userScore);
             System.out.println("У компьютера: " + computerScore);
-
         }
 
         // Выводим итоговый результат
@@ -45,7 +46,7 @@ public class PlayTheGame {
         System.out.println("Вы: " + userScore + " очков");
         System.out.println("Компьютер: " + computerScore + " очков");
 
-        // Определяем общего победителя
+        // Определяем победителя по итогу 5 раундов
         if (userScore > computerScore) {
             System.out.println("Вы победили в игре!");
         } else if (computerScore > userScore) {
@@ -53,7 +54,5 @@ public class PlayTheGame {
         } else {
             System.out.println("Ничья!");
         }
-
-
     }
 }
