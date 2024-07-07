@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class DurationTest {
 
     public static void main(String[] args) throws InterruptedException {
-        LocalDateTime currentDate = LocalDateTime.now().now();
+        LocalDateTime currentDate = LocalDateTime.now();
 
         int days = 0;
         int hours = 22;
